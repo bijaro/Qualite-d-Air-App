@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-height: 100vh;
+  font-family: Inter, sans-serif;
+  position: relative;
+  background-image: linear-gradient(90deg, #4ba0d9, #6dd5fa, #fff);
+  opacity: 0;
+  animation: bodyAnim 1s forwards;
+}
+@keyframes bodyAnim {
+  to {
+    opacity: 1;
+  }
+}
+.big-container {
+  margin: 0 10px 20px;
+}
+#title {
+  font-size: 3.5em;
+  /* font-weight: 900; */
+  color: #fff;
+  text-shadow: 1px 1px 0 #333, 2px 2px 0 #3a3a3a, 3px 3px 0 #575757,
+    4px 4px 0 #6b6b6b;
+  margin: 40px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  border: 1px solid #333;
+  position: relative;
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.03);
+}
+.loader {
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.9s ease-out opacity 0.9s ease-out;
+  z-index: 1;
+}
+.loader.active {
+  visibility: visible;
+  opacity: 1;
+  /* display: none; */
+}
+
+.loaderImg {
+  width: 70px;
+  animation: logoAnim 2s infinite;
+}
+
+@keyframes logoAnim {
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+.emoji {
+  width: 80px;
+  filter: drop-shadow(2px 2px 1px #515151);
+  margin-bottom: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px auto;
+}
+
+table,
+th,
+td {
+  border: 1px solid #333;
+  text-align: left;
+  padding: 5px;
+}
+
+.pointer {
+  width: 20px;
+  transform: rotate(180deg);
+}
+
+.scale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scale1 {
+  height: 5px;
+  flex-grow: 1;
+  margin-left: 2px;
+}
+
+.scale :first-child {
+  background-color: green;
+}
+.scale :first-child {
+  background-color: green;
+}
+.scale :nth-child(2) {
+  background-color: #d7d703;
+}
+.scale :nth-child(3) {
+  background-color: orange;
+}
+.scale :nth-child(4) {
+  background-color: red;
+}
+
+.scale :nth-child(5) {
+  background-color: purple;
+  flex-grow: 2;
+}
+.scale :nth-child(6) {
+  background-color: maroon;
+  flex-grow: 3;
+}
+
+.fottercard {
+  /* border: 1px solid red; */
+  padding-bottom: 20px;
+  position: relative;
+  line-height: 3;
+  text-align: left;
+}
+.pointer {
+  position: absolute;
+  margin-top: 8px;
+  left: -15px;
+  width: 30px;
+  transition: all 0.6s ease-out;
+}
