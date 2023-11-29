@@ -44,9 +44,10 @@ const emojiText = document.querySelector("#emojiText");
 async function getApiData() {
   try {
     const response = await fetch(
-      "http://api.airvisual.com/v2/nearest_city?key=35acc274-f5bf-4296-94f6-4240859a92ed"
+        "https://api.airvisual.com/v2/nearest_city?key=35acc274-f5bf-4296-94f6-4240859a92ed"
+        // "http://api.airvisual.com/v2/nearest_city?key=35acc274-f5bf-4296-94f6-4240859a92ed"
     ).catch((error) => {
-      throw new Error(error);
+        throw new Error(error);
     });
     console.log(response);
     if (!response.ok) {
